@@ -1,0 +1,6 @@
+[fhgfs]
+name=FhGFS/BeeGFS 2014.01 (RHEL7)
+baseurl=http://www.fhgfs.com/release/fhgfs_2014.01/dists/rhel7
+gpgkey=http://www.fhgfs.com/release/fhgfs_2014.01/gpg/RPM-GPG-KEY-fhgfs
+gpgcheck=0
+enabled=1
