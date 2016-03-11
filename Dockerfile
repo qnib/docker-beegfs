@@ -1,8 +1,7 @@
 FROM qnib/terminal
-MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 ADD etc/yum.repos.d/fhgfs.repo /etc/yum.repos.d/fhgfs.repo
-RUN yum install -y fhgfs-mgmtd fhgfs-meta fhgfs-storage fhgfs-helperd fhgfs-utils fhgfs-admon
+RUN dnf install -y fhgfs-mgmtd fhgfs-meta fhgfs-storage fhgfs-helperd fhgfs-utils fhgfs-admon
 ## Do not use init.d
 RUN rm -f /etc/init.d/fhgfs-admon && mkdir -p /data/fhgfs/fhgfs_{meta,mgmtd,storage} /mnt/fhgfs
 ADD etc/supervisord.d/ /etc/supervisord.d/
